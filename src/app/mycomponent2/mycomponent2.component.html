@@ -1,3 +1,141 @@
-<p>
-  mycomponent2 works!
-</p>
+<div class="row tm-tabs-container">
+    <div class="tm-tab-links-col">
+        <nav>
+            <ul class="tm-tabs">
+                <li class="tm-tab-link-item">
+                    <a id="tab1" href="javascript:void(0)" class="tm-tab-link active">
+                        <i class="fa fa-music tm-tab-icon"></i>
+                        <div class="tm-tab-link-label">Tab Section First</div>
+                    </a>
+                </li>
+
+                <li class="tm-tab-link-item">
+                    <a id="tab2" href="javascript:void(0)" class="tm-tab-link">
+                        <i class="fa fa-users tm-tab-icon"></i>
+                        <span class="tm-tab-link-label">Second Tab Title</span>
+                    </a>
+                </li>
+
+                <li class="tm-tab-link-item">
+                    <a id="tab3" href="javascript:void(0)" class="tm-tab-link">
+                        <i class="fa fa-heart tm-tab-icon"></i>
+                        <span class="tm-tab-link-label">Third Section Tab</span>
+                    </a>
+                </li>
+
+                <li class="tm-tab-link-item">
+                    <a id="tab4" href="javascript:void(0)" class="tm-tab-link">
+                        <i class="fa fa-microphone tm-tab-icon"></i>
+                        <span class="tm-tab-link-label">Title Fourth comes up</span>
+                    </a>
+                </li>
+
+                <li class="tm-tab-link-item">
+                    <a id="tab5" href="javascript:void(0)" class="tm-tab-link">
+                        <i class="fa fa-globe tm-tab-icon"></i>
+                        <span class="tm-tab-link-label">Fifth Title goes here</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="tm-tab-content-box-col">
+        <div id="tab1C" class="tm-tab-content-box">
+            <img src="assets/img/img-11-04.jpg" alt="Image" class="img-fluid tm-tab-content-img">
+
+            <div class="tm-tab-content-text">
+                <p>You can <strong>easily</strong> change <a rel="nofollow" href="http://fontawesome.io/icons/" target="_blank">Font Awesome icons</a> in HTML codes. Feel free to modify and use this layout for your websites. Nunc elementum enim nec justo
+                    ornare mollis. Sed facilisis urna vitae lectus maximus, scelerisque aliquet ligula cursus.</p>
+                <ul class="tm-ul-plus">
+                    <li>Vestibulum ullamcorper et lectus</li>
+                    <li>Donec efficitur placer magna</li>
+                    <li>Praesent venenatis diam pellentesque</li>
+                    <li>Nunc consequat nulla vel ipsum</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab2C" class="tm-tab-content-box">
+            <img src="assets/img/img-11-05.jpg" alt="Image" class="img-fluid tm-tab-content-img">
+
+            <div class="tm-tab-content-text">
+                <p>Nam tortor lacus, fringilla nex quam a, volupat laoreet dui. Nunc consequat nulla vel ipsum cursus, eu tempor mauris gravida. Donec sit amet.
+                </p>
+                <ul class="tm-ul-plus">
+                    <li>Vestibulum ullamcorper et lectus</li>
+                    <li>Donec efficitur placer magna</li>
+                    <li>Praesent venenatis diam pellentesque</li>
+                    <li>Nunc consequat nulla vel ipsum</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab3C" class="tm-tab-content-box">
+            <img src="assets/img/img-11-03.jpg" alt="Image" class="img-fluid tm-tab-content-img">
+
+            <div class="tm-tab-content-text">
+                <p><em>Nunc finibus vehicula pharetra. Fusce sed ante a odio fringilla bibendum. Donec et pharetra orci. Praesent tempus efficitur tellus.</em>
+                </p>
+                <ul class="tm-ul-plus">
+                    <li>Vestibulum ullamcorper et lectus</li>
+                    <li>Donec efficitur placer magna</li>
+                    <li>Praesent venenatis diam pellentesque</li>
+                    <li>Nunc consequat nulla vel ipsum</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab4C" class="tm-tab-content-box">
+            <img src="assets/img/img-11-02.jpg" alt="Image" class="img-fluid tm-tab-content-img">
+
+            <div class="tm-tab-content-text">
+                <p>Donec a suscipit turpis. Duis hendrerit risus arcu, et eleifend ipsum vaius vel. Nam tortor lacus, fringilla nec quam a, volupat laoreet dui.
+                </p>
+                <ul class="tm-ul-plus">
+                    <li>Vestibulum ullamcorper et lectus</li>
+                    <li>Donec efficitur placer magna</li>
+                    <li>Praesent venenatis diam pellentesque</li>
+                    <li>Nunc consequat nulla vel ipsum</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab5C" class="tm-tab-content-box">
+            <img src="assets/img/img-11-01.jpg" alt="Image" class="img-fluid tm-tab-content-img">
+
+            <div class="tm-tab-content-text">
+                <p>Proin volupat luctus lacus, sollicitudin dictum orci vestibulum eu. Sed quis fringilla nulla.
+                </p>
+                <ul class="tm-ul-plus">
+                    <li>Vestibulum ullamcorper et lectus</li>
+                    <li>Donec efficitur placer magna</li>
+                    <li>Praesent venenatis diam pellentesque</li>
+                    <li>Nunc consequat nulla vel ipsum</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(window).load(function() {
+        // Tabs
+        // http://stackoverflow.com/questions/11645081/how-to-build-simple-tabs-with-jquery
+        $('.tm-tab-content-box').hide();
+        //$('#tab1C').fadeIn('slow');
+        $('#tab1C').show();
+
+        $('.tm-tab-link').click(function() {
+
+            var t = $(this).attr('id');
+
+            $('.tm-tab-link').removeClass('active');
+            $(this).addClass('active');
+
+            $('.tm-tab-content-box').hide();
+            $('#' + t + 'C').fadeIn('slow');
+
+        });
+    });
+</script>
