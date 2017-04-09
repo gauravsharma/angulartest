@@ -15,7 +15,7 @@ import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotf
 
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: Mycomponent5Component },
   { path: '1', component: MycomponentComponent },
   {
     path: '2',
@@ -27,9 +27,6 @@ const appRoutes: Routes = [
   },
   { path: '4',
     component: Mycomponent4Component
-  },
-  { path: '5',
-    component: Mycomponent5Component
   },
   { path: '**', component: PagenotfoundcomponentComponent }
 ];
