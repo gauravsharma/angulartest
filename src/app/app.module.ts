@@ -12,6 +12,7 @@ import { Mycomponent5Component } from './mycomponent5/mycomponent5.component';
 // import { InputTextModule } from 'primeng/primeng';
 import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotfoundcomponent.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 
 const appRoutes: Routes = [
@@ -47,7 +48,10 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBJ0AS4e2VWVBIjgbLcXFIt-VGkL64bt9s'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

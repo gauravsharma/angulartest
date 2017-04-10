@@ -27,7 +27,10 @@
     <!-- Google Map -->
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <h2 class="tm-contact-form-title">Location</h2>
-        <div id="google-map"></div>
+        <!--<div id="google-map"></div>-->
+        <sebm-google-map [latitude]="lat" [longitude]="lng">
+            <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+        </sebm-google-map>
     </div>
 </div>
 
