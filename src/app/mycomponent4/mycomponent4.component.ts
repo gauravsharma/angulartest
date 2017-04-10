@@ -9,7 +9,7 @@ declare var map: any;
   styleUrls: ['./mycomponent4.component.css']
 })
 export class Mycomponent4Component implements OnInit {
-lat: number = 37.769725;
+  lat: number = 37.769725;
   lng: number = -122.462154;
 
   constructor() {
@@ -18,7 +18,7 @@ lat: number = 37.769725;
   }
 
   ngOnInit() {
-    
+
   }
 
 }
