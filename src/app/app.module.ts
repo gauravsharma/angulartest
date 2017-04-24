@@ -13,6 +13,8 @@ import { Mycomponent5Component } from './mycomponent5/mycomponent5.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotfoundcomponent.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import {LightboxModule} from 'primeng/primeng';
+import { ImagegridComponent } from './imagegrid/imagegrid.component';
 
 
 const appRoutes: Routes = [
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     Mycomponent3Component,
     Mycomponent4Component,
     Mycomponent5Component,
-    PagenotfoundcomponentComponent
+    PagenotfoundcomponentComponent,
+    ImagegridComponent
   ],
   imports: [
     BrowserModule,

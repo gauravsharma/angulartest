@@ -7,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Mycomponent2Component implements OnInit {
 
-  tabs: number;
-
   constructor() {
-    this.tabs = 5;
   }
 
   ngOnInit() {

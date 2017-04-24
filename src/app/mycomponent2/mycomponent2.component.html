@@ -118,25 +118,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(window).load(function() {
-        // Tabs
-        // http://stackoverflow.com/questions/11645081/how-to-build-simple-tabs-with-jquery
-        $('.tm-tab-content-box').hide();
-        //$('#tab1C').fadeIn('slow');
-        $('#tab1C').show();
-
-        $('.tm-tab-link').click(function() {
-
-            var t = $(this).attr('id');
-
-            $('.tm-tab-link').removeClass('active');
-            $(this).addClass('active');
-
-            $('.tm-tab-content-box').hide();
-            $('#' + t + 'C').fadeIn('slow');
-
-        });
-    });
-</script>
