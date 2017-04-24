@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Mycomponent2Component implements OnInit {
 
-  tabs:number;
+  tabs: number;
 
-  constructor() { 
+  constructor() {
     this.tabs = 5;
   }
 
@@ -19,16 +19,24 @@ export class Mycomponent2Component implements OnInit {
     for (i = 0; i < allTabs.length; i++) {
       allTabs[i].classList.add('sr-only');
     }
+
+    document.querySelector('#tab1C').classList.remove('sr-only');
   }
 
   showTab(tabId: string) {
     var t = tabId;
-    console.log(t);
 
-    document.querySelector('.tm-tab-content-box').classList.add('sr-only');
+    for (var i = 0; i < document.querySelectorAll('.tm-tab-content-box').length; i++) {
+      document.querySelectorAll('.tm-tab-content-box')[i].classList.add('sr-only');
+    }
 
-    document.querySelector('#' + t).classList.remove('sr-only');
-    document.querySelector('#' + t).classList.add('show');
+    for (var i = 0; i < document.querySelectorAll('.tm-tab-link').length; i++) {
+      document.querySelectorAll('.tm-tab-link')[i].classList.remove('active');
+    }
+    document.querySelector('#' + t).classList.add('active');
+
+    document.querySelector('#' + t+'C').classList.remove('sr-only');
+    document.querySelector('#' + t+'C').classList.add('show');
   }
 
 }
