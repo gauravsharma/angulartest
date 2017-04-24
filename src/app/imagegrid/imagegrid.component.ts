@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LightboxModule} from 'primeng/primeng';
 
 @Component({
-  selector: 'light-box',
+  selector: 'lightbox',
   templateUrl: './imagegrid.component.html',
   styleUrls: ['./imagegrid.component.css']
 })
@@ -27,6 +27,7 @@ export class ImagegridComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.images);
   }
 
 }

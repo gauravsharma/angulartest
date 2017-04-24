@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  ngOnInit() {
+    //remove preloader
+    document.querySelector('body').classList.add('loaded');
+  }
 }

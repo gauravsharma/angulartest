@@ -17,7 +17,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Bootstrap style -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--<link rel="stylesheet" href="assets/css/magnific-popup.css">-->
     <!-- Magnific popup style (http://dimsemenov.com/plugins/magnific-popup/) -->
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <!-- Templatemo style -->
@@ -32,9 +32,6 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <light-box>images loading ....</light-box>
-        </div>
 
         <app-root>Loading...</app-root>
 
@@ -50,6 +47,7 @@
                     </ul>
                 </nav>
             </div>
+            <router-outlet></router-outlet>
         </div>
         <!-- row -->
 
@@ -89,24 +87,6 @@
     <!-- Tether for Bootstrap (http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h) -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Magnific popup (http://dimsemenov.com/plugins/magnific-popup/) -->
-    <script>
-        $(window).load(function() {
-            /* Gallery pop up
-            -----------------------------------------*/
-            $('.tm-header-gallery').magnificPopup({
-                delegate: 'a', // child items selector, by clicking on it popup will open
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-            // Remove preloader
-            // https://ihatetomatoes.net/create-custom-preloading-screen/
-            $('body').addClass('loaded');
-        });
-    </script>
 </body>
 
 </html>
