@@ -4,8 +4,9 @@ import { LightboxModule } from 'primeng/primeng';
 @Component({
   selector: 'lightbox',
   templateUrl: './imagegrid.component.html',
-  styleUrls: ['./imagegrid.component.css']
+  styleUrls: ['./imagegrid.component.css'],
 })
+
 export class ImagegridComponent implements OnInit {
   images: any[];
 

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {LightboxModule} from 'primeng/primeng';
+import {LightboxModule, TooltipModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { MycomponentComponent } from './mycomponent/mycomponent.component';
@@ -53,7 +53,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBJ0AS4e2VWVBIjgbLcXFIt-VGkL64bt9s'
-    })
+    }),
+    TooltipModule,
+    LightboxModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
