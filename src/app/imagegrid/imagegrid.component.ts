@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LightboxModule } from 'primeng/primeng';
 
 @Component({
   selector: 'lightbox',
@@ -28,7 +27,6 @@ export class ImagegridComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.images);
   }
 
 }

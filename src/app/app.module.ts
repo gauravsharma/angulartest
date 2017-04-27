@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {LightboxModule, TooltipModule} from 'primeng/primeng';
+import { LightboxModule, TooltipModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { MycomponentComponent } from './mycomponent/mycomponent.component';
@@ -24,10 +24,12 @@ const appRoutes: Routes = [
     component: Mycomponent2Component,
     data: { title: '2 component' }
   },
-  { path: '3',
+  {
+    path: '3',
     component: Mycomponent3Component
   },
-  { path: '4',
+  {
+    path: '4',
     component: Mycomponent4Component
   },
   { path: '**', component: PagenotfoundcomponentComponent }
@@ -55,9 +57,10 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyBJ0AS4e2VWVBIjgbLcXFIt-VGkL64bt9s'
     }),
     TooltipModule,
-    LightboxModule
+    LightboxModule,
+    ReactiveFormsModule
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
