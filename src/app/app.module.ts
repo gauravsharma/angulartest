@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotfoundcomponent.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ImagegridComponent } from './imagegrid/imagegrid.component';
+import { MessageService } from './services/message.service';
 
 
 const appRoutes: Routes = [
@@ -61,7 +62,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
