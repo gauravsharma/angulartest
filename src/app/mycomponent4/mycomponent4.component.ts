@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessageService } from '../services/message.service';
 import { Observable } from 'rxjs';
+import { Router, ActivatedRouteSnapshot } from '@angular/router';
 
 declare var google: any;
 declare var center: any;
@@ -21,6 +22,7 @@ export class Mycomponent4Component implements OnInit {
   submitted = false;
   active = true;
   contactForm: FormGroup;
+  router: ActivatedRouteSnapshot;
 
   formErrors = {
     'contact_name': '',

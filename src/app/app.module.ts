@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { LightboxModule, TooltipModule } from 'primeng/primeng';
+import { LightboxModule, TooltipModule, DataTableModule, SharedModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { MycomponentComponent } from './mycomponent/mycomponent.component';
@@ -15,24 +15,16 @@ import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotf
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ImagegridComponent } from './imagegrid/imagegrid.component';
 import { MessageService } from './services/message.service';
+import { MessagesComponent } from './messages/messages.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: Mycomponent5Component },
-  { path: '1', component: MycomponentComponent },
-  {
-    path: '2',
-    component: Mycomponent2Component,
-    data: { title: '2 component' }
-  },
-  {
-    path: '3',
-    component: Mycomponent3Component
-  },
-  {
-    path: '4',
-    component: Mycomponent4Component
-  },
+  { path: '', component: Mycomponent5Component, data: { title: 'Home' } },
+  { path: '1', component: MycomponentComponent, data: { title: 'About' } },
+  { path: '2', component: Mycomponent2Component, data: { title: 'Services' } },
+  { path: '3', component: Mycomponent3Component, data: { title: 'Blog' } },
+  { path: '4', component: Mycomponent4Component, data: { title: 'Contact' } },
+  { path: 'messages', component: MessagesComponent, data: { title: 'Messages' } },
   { path: '**', component: PagenotfoundcomponentComponent }
 ];
 
@@ -47,7 +39,8 @@ const appRoutes: Routes = [
     Mycomponent4Component,
     Mycomponent5Component,
     PagenotfoundcomponentComponent,
-    ImagegridComponent
+    ImagegridComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +52,9 @@ const appRoutes: Routes = [
     }),
     TooltipModule,
     LightboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DataTableModule,
+    SharedModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [MessageService],
