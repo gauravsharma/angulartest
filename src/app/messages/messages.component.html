@@ -16,9 +16,9 @@
 </p-dataTable>
 
 
-<p-dialog header="Confirm" [(visible)]="displayConfirmation">
+<p-dialog *ngIf="msg" header="Confirm" [(visible)]="displayConfirmation">
   <p>
-    Are you sure you want to delete?
+    Are you sure you want to delete "{{msg['email']}}"?
   </p>
   <p>
     <button type="button" pButton (click)="displayConfirmation=false; delMessage()" icon="fa fa-check"></button>

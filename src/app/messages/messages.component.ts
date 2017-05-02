@@ -40,11 +40,6 @@ export class MessagesComponent implements OnInit {
   showDialog(message: object) {
     console.log(message);
     this.msg = message;
-    // this.displayConfirmation = true;
   }
-
-  // hideDialog() {
-  //   this.displayConfirmation = false;
-  // }
 
 }
