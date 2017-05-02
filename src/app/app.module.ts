@@ -18,6 +18,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ImagegridComponent } from './imagegrid/imagegrid.component';
 import { MessageService } from './services/message.service';
 import { MessagesComponent } from './messages/messages.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: '3', component: Mycomponent3Component, data: { title: 'Blog' } },
   { path: '4', component: Mycomponent4Component, data: { title: 'Contact' } },
   { path: 'messages', component: MessagesComponent, data: { title: 'Messages' } },
+  { path: 'login', component: LoginComponent, data: { title: 'Login' } },
   { path: '**', component: PagenotfoundcomponentComponent }
 ];
 
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     Mycomponent5Component,
     PagenotfoundcomponentComponent,
     ImagegridComponent,
-    MessagesComponent
+    MessagesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
