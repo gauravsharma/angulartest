@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { LightboxModule, TooltipModule, DataTableModule, SharedModule } from 'primeng/primeng';
+import { LightboxModule, TooltipModule, DataTableModule, 
+  SharedModule, ButtonModule, DialogModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { MycomponentComponent } from './mycomponent/mycomponent.component';
@@ -44,6 +46,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
@@ -54,7 +57,9 @@ const appRoutes: Routes = [
     LightboxModule,
     ReactiveFormsModule,
     DataTableModule,
-    SharedModule
+    SharedModule,
+    ButtonModule,
+    DialogModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [MessageService],

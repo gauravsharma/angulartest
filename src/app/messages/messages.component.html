@@ -1,7 +1,27 @@
-<p-dataTable [value]="messages">
-    <p-header>Messages List</p-header>
-    <p-column field="name" header="Name"></p-column>
-    <p-column field="email" header="Email"></p-column>
-    <p-column field="subject" header="Subject"></p-column>
-    <p-column field="text" header="Message"></p-column>
+<p-dataTable [value]="messages" [rows]="10" [paginator]="true">
+  <p-header>Messages List</p-header>
+  <p-column field="name" header="Name"></p-column>
+  <p-column field="email" header="Email"></p-column>
+  <p-column field="subject" header="Subject"></p-column>
+  <p-column field="text" header="Message"></p-column>
+  <p-column styleClass="col-button">
+    <ng-template pTemplate="header">
+      Actions
+    </ng-template>
+    <ng-template let-message="rowData" pTemplate="body">
+      <button type="button" pButton (click)="displayConfirmation=true;showDialog(message)" icon="fa fa-pencil"></button>
+      <button type="button" pButton (click)="displayConfirmation=true;showDialog(message)" icon="fa fa-trash"></button>
+    </ng-template>
+  </p-column>
 </p-dataTable>
+
+
+<p-dialog header="Confirm" [(visible)]="displayConfirmation">
+  <p>
+    Are you sure you want to delete?
+  </p>
+  <p>
+    <button type="button" pButton (click)="displayConfirmation=false; delMessage()" icon="fa fa-check"></button>
+    <button type="button" pButton (click)="displayConfirmation=false" icon="fa fa-close"></button>
+  </p>
+</p-dialog>
