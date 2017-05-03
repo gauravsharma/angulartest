@@ -54,49 +54,24 @@
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
     <div class="tm-search-form-container tm-blue-bg">
-      <form class="form-inline tm-search-form" method="get" action="contact.html">
+      <form class="form-inline tm-search-form">
         <div class="form-group tm-form-group-search">
-          <input type="text" name="search_term" class="form-control tm-search-input" id="inputSearch" placeholder="Type your question...">
+          <input  [(ngModel)]='searchKeyword' type="text" name="search_term" class="form-control tm-search-input" id="inputSearch" placeholder="Type your question..." value="">
         </div>
-        <button type="submit" class="btn tm-search-btn">Search</button>
+        <button type="submit" class="btn tm-search-btn" (click)="getSearchResults()">Search</button>
       </form>
     </div>
   </div>
 </div>
 <!-- row -->
 
-<div class="row tm-faq-row">
+<div *ngIf="searchRes" class="row tm-faq-row">
 
-  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-
-    <div class="tm-about-box">
-      <h2 class="tm-about-title">Frequent Questions</h2>
-      <p class="tm-about-description tm-highlight-text">1. Maecenas venenatis neque non nisl tincidunt rhoncus. Duis accumsan turpis a lacus interdum, eu varius augue maximus.
-        Ut faucibus pharetra neque?</p>
-      <p class="tm-about-description">Quisque interdum nisl sit amet turpis auctor, quis suscipit ipsum congue. Naecenas id tortor ultrices tellus maximus
-        varius at vel neque. Aliquam vitae tortor suscipit.</p>
-
-      <p class="tm-about-description tm-highlight-text">2. Fusce maximus et mi vitae eleifend. Quisque dapibus ex eu massa dapibus, sollicitudin aliquet quam accumsan?</p>
-
-      <p class="tm-about-description">Quisque interdum nisl sit amet turpis auctor, quis suscipit ipsum congue. Naecenas id tortor ultrices tellus maximus
-        varius at vel neque. Aliquam vitae tortor suscipit.</p>
+    <div *ngFor="let result of searchRes" class="tm-about-box">
+      <div class="tm-about-description">
+        <a href="{{result.link}}" class="tm-highlight-text">{{result.title}}</a>
+        <p>{{result.snippet}}</p>
+      </div>
     </div>
-
-  </div>
-
-  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-
-    <div class="tm-about-box">
-      <h2 class="tm-about-title">&nbsp;</h2>
-      <p class="tm-about-description tm-highlight-text">3. Donec efficitur maximus nisl quis semper. Nullam lobortis, ante ac rutrum tristique, ligula justo imperdiet eros,
-        et semper augue tellus quis est?</p>
-      <p class="tm-about-description">Ut varius ante non purus tempus dignissim. Integer rhoncus et elit sit amet aliquet. Proin molestie ligula luctus,
-        pellentesque lectus ut, viverra mauris. Aliquam vitae.</p>
-      <p class="tm-about-description tm-highlight-text">4. Cras aliquam magna ipsum, in suscipit elit tristique sit amet. Sed lobortis neque eu dui eleifend hendrerit?</p>
-      <p class="tm-about-description">Praesent convallis felis sed efficitur porta. Duis vitae eros elit. Nam vitae quam metus. Nam congue augue non accumsan
-        consequat. Proin consequat elit ut velit.</p>
-    </div>
-
-  </div>
 
 </div>

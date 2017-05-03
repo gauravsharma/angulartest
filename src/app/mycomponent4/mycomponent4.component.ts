@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessageService } from '../services/message.service';
+import { SearchService } from '../services/search.service';
 import { Observable } from 'rxjs';
 import { Router, ActivatedRouteSnapshot } from '@angular/router';
 
@@ -12,7 +13,7 @@ declare var map: any;
   selector: 'app-mycomponent4',
   templateUrl: './mycomponent4.component.html',
   styleUrls: ['./mycomponent4.component.css'],
-  providers: [MessageService]
+  providers: [MessageService, SearchService]
 })
 
 export class Mycomponent4Component implements OnInit {
@@ -23,6 +24,8 @@ export class Mycomponent4Component implements OnInit {
   active = true;
   contactForm: FormGroup;
   router: ActivatedRouteSnapshot;
+  searchRes: any[];
+  searchKeyword: string;
 
   formErrors = {
     'contact_name': '',
@@ -49,7 +52,7 @@ export class Mycomponent4Component implements OnInit {
     }
   };
 
-  constructor(private fb: FormBuilder, private messageService: MessageService) { }
+  constructor(private fb: FormBuilder, private messageService: MessageService, private searchService: SearchService) { }
 
   onSubmit() {
     this.submitted = true;
@@ -126,6 +129,11 @@ export class Mycomponent4Component implements OnInit {
   getMessages() {
     return this.messageService.get()
       .map((res: Response) => res.json());
+  }
+
+  getSearchResults() {
+    return this.searchService.search(this.searchKeyword)
+    .subscribe(searchRes => this.searchRes = searchRes['items']);
   }
 
 }

@@ -17,6 +17,7 @@ import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotf
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ImagegridComponent } from './imagegrid/imagegrid.component';
 import { MessageService } from './services/message.service';
+import { SearchService } from './services/search.service';
 import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 
@@ -65,7 +66,7 @@ const appRoutes: Routes = [
     DialogModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [MessageService],
+  providers: [MessageService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
