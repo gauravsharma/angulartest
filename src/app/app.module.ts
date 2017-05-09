@@ -20,6 +20,8 @@ import { MessageService } from './services/message.service';
 import { SearchService } from './services/search.service';
 import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { LoginService } from './services/login.service';
 
 
 const appRoutes: Routes = [
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     PagenotfoundcomponentComponent,
     ImagegridComponent,
     MessagesComponent,
-    LoginComponent
+    LoginComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,7 @@ const appRoutes: Routes = [
     DialogModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [MessageService, SearchService],
+  providers: [MessageService, SearchService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

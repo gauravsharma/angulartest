@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {  Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { AppSettings } from '../../app.settings';
 
 @Injectable()
 export class SearchService {
-  private searchApi = 'http://localhost:3000/search';
+  private searchApi = AppSettings.API_ENDPOINT + '/search';
   private headers = new Headers({'Content-Type': 'application/json'});
   private options = new RequestOptions({ headers: this.headers });
 
