@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  public isLoggedIn:boolean;
 
-  constructor() { }
+  constructor() {
+    this.isLoggedIn = false;
+  }
 
   ngOnInit() {
+    if(localStorage.getItem('currentUser')) {
+      this.isLoggedIn = true;
+    }
   }
 
 }

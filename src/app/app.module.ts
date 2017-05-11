@@ -4,7 +4,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { LightboxModule, TooltipModule, DataTableModule, 
-  SharedModule, ButtonModule, DialogModule } from 'primeng/primeng';
+  SharedModule, ButtonModule, DialogModule, MessagesModule, PanelModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { MycomponentComponent } from './mycomponent/mycomponent.component';
@@ -22,6 +22,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LoginService } from './services/login.service';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const appRoutes: Routes = [
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
   { path: '4', component: Mycomponent4Component, data: { title: 'Contact' } },
   { path: 'messages', component: MessagesComponent, data: { title: 'Messages' } },
   { path: 'login', component: LoginComponent, data: { title: 'Login' } },
+  { path: 'logout', component: LogoutComponent, data: { title: 'Logout' } },
   { path: '**', component: PagenotfoundcomponentComponent }
 ];
 
@@ -49,7 +51,8 @@ const appRoutes: Routes = [
     ImagegridComponent,
     MessagesComponent,
     LoginComponent,
-    NavigationComponent
+    NavigationComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,9 @@ const appRoutes: Routes = [
     DataTableModule,
     SharedModule,
     ButtonModule,
-    DialogModule
+    DialogModule,
+    MessagesModule,
+    PanelModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [MessageService, SearchService, LoginService],
